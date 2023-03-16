@@ -1,0 +1,20 @@
+#!/bin/bash
+
+CFILE="$1"
+
+if [ -z "$CFILE" ]; then
+    echo "Usage: $0 <CFILE>"
+    exit 1
+fi
+
+if [ ! -f "$CFILE" ]; then
+    echo "Error: file not found: $CFILE"
+    exit 1
+fi
+
+BASENAME="${CFILE%.*}"
+
+gcc -S -masm=intel "$CFILE" -o "$BASENAME.s"
+echo "Assembly code saved to $BASENAME.s"
+
+
