@@ -1,3 +1,11 @@
+/**
+ * main - Entry point
+ *
+ * Description: Prints the lowercase alphabet using putchar
+ *
+ * Return: Always 0 (Success)
+ */
+
 #include <stdio.h>
 
 int main(void)
@@ -9,8 +17,8 @@ int main(void)
         putchar(letter);
         letter++;
     }
+
     putchar('\n');
 
     return (0);
 }
-
