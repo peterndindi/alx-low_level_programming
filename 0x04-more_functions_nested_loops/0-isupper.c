@@ -1,4 +1,3 @@
-# include <stdio.h>
 /**
  * _isupper - checks for uppercase character
  * @c: the character to check
@@ -12,3 +11,4 @@ int _isupper(int c)
 	else
 		return (0);
 }
+
